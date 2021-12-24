@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Color Button = const Color(0xFFE5C4D5);
+Color button = const Color(0xFFE5C4D5);
 
 const Color pink1 = Color(0xFFE5C4D5);
 const Color pink2 = Color(0xFFE2AFC9);

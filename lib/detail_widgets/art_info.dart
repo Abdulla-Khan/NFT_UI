@@ -12,18 +12,18 @@ class ArtInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             art.name!,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 22,
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(
             children: [
               iconText(
@@ -32,15 +32,15 @@ class ArtInfo extends StatelessWidget {
                 profile.twitter!.substring(1),
                 0,
               ),
-              SizedBox(width: 85),
+              const SizedBox(width: 85),
               iconText(
                   'assets/images/eth.png', 'Current bid', '${art.price} ETH', 8)
             ],
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           Text(
             art.desc!,
-            style: TextStyle(
+            style: const TextStyle(
               wordSpacing: 3,
               height: 1.3,
               color: Colors.black87,
@@ -63,18 +63,18 @@ class ArtInfo extends StatelessWidget {
               color: Colors.grey.shade200, shape: BoxShape.circle),
           child: Image.asset(imgUrl),
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black45,
               ),
             ),
             Text(text,
-                style: TextStyle(
+                style: const TextStyle(
                     fontWeight: FontWeight.bold, fontSize: 16, height: 1.5))
           ],
         )

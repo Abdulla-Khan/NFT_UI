@@ -23,7 +23,7 @@ class DetailPage extends StatelessWidget {
                     SliverAppBar(
                       elevation: 0,
                       expandedHeight: 330,
-                      backgroundColor: Button,
+                      backgroundColor: button,
                       leading: icon(context, Icons.arrow_back_ios_new_outlined,
                           back: true),
                       actions: [icon(context, Icons.more_vert_outlined)],
@@ -62,13 +62,13 @@ class DetailPage extends StatelessWidget {
                 body: TabBarView(
                   children: [
                     ListView(
-                      children: [],
+                      children: const [],
                     ),
                     BidderList(scrollKey: 'Bids', bidList: art.bidList!),
                     BidderList(scrollKey: 'History', bidList: art.hisList!)
                   ],
                 ))),
-        floatingActionButton: BuyButton(),
+        floatingActionButton: buyButton(),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat);
   }
 
@@ -85,23 +85,22 @@ class DetailPage extends StatelessWidget {
         ));
   }
 
-  Widget BuyButton() {
+  Widget buyButton() {
     return Container(
         width: double.maxFinite,
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         height: 56,
         child: RawMaterialButton(
             onPressed: () {},
-            fillColor: Button,
+            fillColor: button,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
             ),
             elevation: 0,
-            child: Container(
-                child: Text('Buy it now',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    )))));
+            child: const Text('Buy it now',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ))));
   }
 }

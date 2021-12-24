@@ -42,7 +42,7 @@ class PersonInfo extends StatelessWidget {
             profile.email!,
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
         ],
       ),
     );

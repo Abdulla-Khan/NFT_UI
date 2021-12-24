@@ -6,6 +6,7 @@ class TabSliver extends SliverPersistentHeaderDelegate {
   final bool space;
   TabSliver({required this.bar, required this.space});
 
+  @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Container(
